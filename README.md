@@ -19,6 +19,8 @@ The objective of this project is to provide users with a fun and interactive way
 - DALL-E (AI image generator)
 
 ## Preview
-[![Password Generator Preview](img/example1.png)](index.html)
-[![Password Generator Preview](img/example2.png)](index.html)
-[![Password Generator Preview](img/example3.png)](index.html)
+[![Mona Lisa Tinder Preview](img/example1.png)](index.html)
+[![Mona Lisa Tinder Preview](img/example2.png)](index.html)
+[![Mona Lisa Tinder Preview](img/example3.png)](index.html)
+[![Mona Lisa Tinder Preview](img/example4.png)](index.html)
+
