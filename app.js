@@ -124,3 +124,28 @@ function startDrag(event) {
 // Event listeners for mouse and touch start events to initiate drag
 document.addEventListener('mousedown', startDrag);
 document.addEventListener('touchstart', startDrag, { passive: true });
+
+// Function to handle swiping left
+function swipeLeft() {
+  console.log('Swiped Left');
+}
+
+// Function to handle swiping right
+function swipeRight() {
+  console.log('Swiped Right');
+}
+
+// Function to handle card removal animation
+function animateCardRemoval() {
+  console.log('Animating Card Removal');
+}
+
+// Function to handle card reset animation
+function animateCardReset() {
+  console.log('Animating Card Reset');
+}
+
+// Function to calculate distance between two points
+function calculateDistance(point1, point2) {
+  return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+}
