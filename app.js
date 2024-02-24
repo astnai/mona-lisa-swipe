@@ -121,7 +121,7 @@ function startDrag(event) {
   }
 }
 
-// Event listeners for mouse and touch start events to initiate drag
+// Event listeners for mouse, touch start events to initiate drag
 document.addEventListener('mousedown', startDrag);
 document.addEventListener('touchstart', startDrag, { passive: true });
 
