@@ -5,6 +5,13 @@ const DECISION_THRESHOLD = 75;
 let isAnimating = false;
 let pullDeltaX = 0; // distance from the card being dragged
 
+// New variables to track the number of cards dragged and removed
+let cardsDragged = 0;
+let cardsRemoved = 0;
+
+// Get the card container
+const cardContainer = document.querySelector('.card-container');
+
 // Function to start the drag event
 function startDrag(event) {
   // Prevent drag event if currently animating
@@ -13,6 +20,9 @@ function startDrag(event) {
   // Get the card being dragged
   const actualCard = event.target.closest('article');
   if (!actualCard) return;
+
+  // Increment the cards dragged count
+  cardsDragged++;
 
   // Get initial position of mouse or finger
   const startX = event.pageX ?? event.touches[0].pageX;
@@ -77,6 +87,8 @@ function startDrag(event) {
       actualCard.classList.add(goRight ? 'go-right' : 'go-left');
       actualCard.addEventListener('transitionend', () => {
         actualCard.remove();
+        // Increment the cards removed count
+        cardsRemoved++;
       });
     } else {
       // Reset card position and opacity
@@ -101,6 +113,11 @@ function startDrag(event) {
     actualCard
       .querySelectorAll('.choice')
       .forEach(el => (el.style.opacity = 0));
+
+    // If all cards have been dragged and removed, log a message
+    if (cardsDragged === cardsRemoved && cardContainer.children.length === 0) {
+      console.log('All cards have been removed!');
+    }
   }
 }
 

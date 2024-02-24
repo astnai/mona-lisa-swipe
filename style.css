@@ -88,35 +88,35 @@ footer button {
   border: 0;
   cursor: pointer;
   transition: scale 0.3s ease; /* Button hover animation */
+}
 
-  /* Button hover effect */
-  &:hover {
-    scale: 1.4;
-  }
+/* Button hover effect */
+footer button:hover {
+  scale: 1.4;
+}
 
-  /* Larger button styles */
-  &.is-big {
-    background-size: 250px;
-    width: 48px;
-    height: 48px;
-  }
+/* Larger button styles */
+footer button.is-big {
+  background-size: 250px;
+  width: 48px;
+  height: 48px;
+}
 
-  /* Button icon positions */
-  &.is-undo {
-    background-position: -140px 0;
-  }
+/* Button icon positions */
+footer button.is-undo {
+  background-position: -140px 0;
+}
 
-  &.is-remove {
-    background-position: -150px 0;
-  }
+footer button.is-remove {
+  background-position: -150px 0;
+}
 
-  &.is-fav {
-    background-position: -50px 0;
-  }
+footer button.is-fav {
+  background-position: -50px 0;
+}
 
-  &.is-star {
-    background-position: -70px 0px;
-  }
+footer button.is-star {
+  background-position: -70px 0px;
 }
 
 /* Cards section styles */
