@@ -1,0 +1,232 @@
+/* Global CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  user-select: none; /* Prevent text selection */
+  background: #e5e5e5; /* Background color */
+}
+
+/* White background overlay */
+.white-bkg {
+  position: absolute;
+  background: #f6f6f6;
+  inset: 0;
+  z-index: -10;
+}
+
+/* Shadow effect */
+.shadow {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+}
+
+/* Main container styles */
+main {
+  background: url('./img/iphone.webp') no-repeat; /* Background image */
+  background-size: contain;
+  width: 320px;
+  height: 640px;
+  display: flex;
+  position: relative;
+}
+
+/* Section styles */
+section {
+  width: 100%;
+  border-radius: 32px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding: 16px 6px;
+  margin: 24px;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: start;
+  padding-left: 1rem;
+}
+
+/* Header image styles */
+header img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Footer styles */
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button styles */
+footer button {
+  background: url('./img/tinder-icons.webp') no-repeat; /* Button background image */
+  background-position: 0px 0px;
+  background-size: 175px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  transition: scale 0.3s ease; /* Button hover animation */
+
+  /* Button hover effect */
+  &:hover {
+    scale: 1.4;
+  }
+
+  /* Larger button styles */
+  &.is-big {
+    background-size: 250px;
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Button icon positions */
+  &.is-undo {
+    background-position: -140px 0;
+  }
+
+  &.is-remove {
+    background-position: -150px 0;
+  }
+
+  &.is-fav {
+    background-position: -50px 0;
+  }
+
+  &.is-star {
+    background-position: -70px 0px;
+  }
+}
+
+/* Cards section styles */
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* No more cards message styles */
+.cards > span {
+  display: grid;
+  place-content: center;
+  color: #777;
+  font-size: 14px;
+  text-align: center;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Card article styles */
+.cards article {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: grab;
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Card animation styles */
+.cards article.go-left {
+  transform: translateX(-150%) rotate(-30deg) !important;
+}
+
+.cards article.go-right {
+  transform: translateX(150%) rotate(30deg) !important;
+}
+
+.cards article.go-left,
+.cards article.go-right {
+  transition: transform 0.3s ease, rotate 0.3s ease;
+}
+
+.cards article.reset {
+  transition: transform 0.3s ease;
+  transform: translateX(0) !important;
+}
+
+/* Choice button styles */
+.cards article .choice {
+  border-radius: 8px;
+  color: black;
+  border: 4px solid;
+  z-index: 9999;
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  opacity: 0;
+  padding: 4px 8px;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: fit-content;
+}
+
+/* NOPE button styles */
+.cards article .choice.nope {
+  border-color: #ff6e63;
+  color: #ff6e63;
+  transform: rotate(30deg);
+}
+
+/* LIKE button styles */
+.cards article .choice.like {
+  border-color: #63ff68;
+  color: #63ff68;
+  left: 16px;
+  transform: rotate(-30deg);
+}
+
+/* Card image styles */
+.cards article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card title styles */
+.cards article h2 {
+  color: white;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  padding: 16px;
+  z-index: 3;
+  background: linear-gradient(to top, #00000088 20%, transparent 40%);
+}
+
+/* Card artist name styles */
+.cards article span {
+  margin-left: 6px;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 400;
+}
