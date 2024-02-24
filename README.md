@@ -16,7 +16,7 @@ The objective of this project is to provide users with a fun and interactive way
 - HTML
 - CSS
 - JavaScript
-- DALL-E (AI image generator)
+- [DALL - E](https://labs.openai.com/)
 
 ## Preview
 [![Mona Lisa Tinder Preview](img/example1.png)](index.html)
