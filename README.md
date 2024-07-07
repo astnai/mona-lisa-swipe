@@ -1,4 +1,4 @@
-# Mona Lisa Tinder
+# Mona Lisa swipe
 
 ## About
 This repository contains a clone of Tinder where the cards feature AI-generated images of the Mona Lisa. The goal is for the user to choose their preferred artist style by liking or disliking the cards.
@@ -19,8 +19,8 @@ The objective of this project is to provide users with a fun and interactive way
 - [DALL - E](https://labs.openai.com/)
 
 ## Preview
-[![Mona Lisa Tinder Preview](img/example1.png)](index.html)
-[![Mona Lisa Tinder Preview](img/example2.png)](index.html)
-[![Mona Lisa Tinder Preview](img/example3.png)](index.html)
-[![Mona Lisa Tinder Preview](img/example4.png)](index.html)
+[![Preview 1](img/example1.png)](index.html)
+[![Preview 3](img/example2.png)](index.html)
+[![Preview 3](img/example3.png)](index.html)
+[![Preview 4](img/example4.png)](index.html)
 
